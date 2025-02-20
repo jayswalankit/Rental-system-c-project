@@ -254,9 +254,11 @@ void update_car_price() {
     char car_name[100];
     printf("Enter the name of the car to update the price: ");
     fgets(car_name, sizeof(car_name), stdin);
-    getchar();  
+    // getchar();  
     car_name[strcspn(car_name, "\n")] = '\0';
-    printf("Debuggingh: %s\n", car_name);
+    // puts(car_name);
+
+    // printf("Debuggingh: %s\n", car_name);
 
     FILE *file = fopen("cars.txt", "r");
     FILE *temp_file = fopen("temp.txt", "w");
